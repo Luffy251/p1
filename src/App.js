@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import MainSection from "./components/MainSection";
+import Footer from "./components/Footer"; // Import the Footer component
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-[#181048] text-white flex flex-col">
+      <Header />
+      <MainSection />
+      <div className="flex-grow"></div> {/* Fills the space between MainSection and Footer */}
+      <Footer /> {/* Add Footer here */}
     </div>
   );
 }
