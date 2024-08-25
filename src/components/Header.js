@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function Header() {
   return (
@@ -11,9 +12,10 @@ function Header() {
 
         {/* Menu */}
         <nav className="hidden md:flex space-x-8">
-          <a href="#" className="text-gray-300 hover:text-white">Home</a>
-          <a href="#" className="text-gray-300 hover:text-white">Profile</a>
-          <a href="#" className="text-gray-300 hover:text-white">Campaign</a>
+          <Link to="/" className="text-gray-300 hover:text-white">Home</Link>
+          <Link to="/profile" className="text-gray-300 hover:text-white">Profile</Link>
+          <Link to="/campaign" className="text-gray-300 hover:text-white">Campaign</Link>
+          <Link to="/swap" className="text-gray-300 hover:text-white">Swap</Link>
         </nav>
 
         {/* Sign Up Button */}
@@ -26,7 +28,6 @@ function Header() {
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button className="text-white focus:outline-none">
-            {/* You can replace this with a hamburger icon */}
             <svg
               className="w-6 h-6"
               fill="none"
@@ -47,9 +48,10 @@ function Header() {
 
       {/* Mobile Menu */}
       <nav className="md:hidden mt-4 space-y-2">
-        <a href="#" className="block text-gray-300 hover:text-white">Solutions</a>
-        <a href="#" className="block text-gray-300 hover:text-white">Pricing</a>
-        <a href="#" className="block text-gray-300 hover:text-white">About</a>
+        <Link to="/" className="block text-gray-300 hover:text-white">Home</Link>
+        <Link to="/profile" className="block text-gray-300 hover:text-white">Profile</Link>
+        <Link to="/campaign" className="block text-gray-300 hover:text-white">Campaign</Link>
+        <Link to="/swap" className="block text-gray-300 hover:text-white">Swap</Link>
         <button className="w-full bg-white text-[#181048] py-2 px-4 rounded-full hover:bg-gray-200">
           Sign up
         </button>
